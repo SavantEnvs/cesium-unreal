@@ -1,0 +1,9 @@
+project: savantenvs/cesium-unreal
+target: tileset-json
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/tileset-json/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_tileset_json
+    libfuzzer: true
+    timeout: 10

@@ -1,0 +1,9 @@
+project: savantenvs/cesium-unreal
+target: gltf-utilities
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/gltf-utilities/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_gltf_utilities
+    libfuzzer: true
+    timeout: 10

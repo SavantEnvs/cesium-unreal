@@ -1,0 +1,9 @@
+project: savantenvs/cesium-unreal
+target: quantized-mesh
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/quantized-mesh/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_quantized_mesh
+    libfuzzer: true
+    timeout: 10

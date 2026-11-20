@@ -1,0 +1,9 @@
+project: savantenvs/cesium-unreal
+target: subtree
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/subtree/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_subtree
+    libfuzzer: true
+    timeout: 10

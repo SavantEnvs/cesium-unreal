@@ -1,0 +1,9 @@
+project: savantenvs/cesium-unreal
+target: tile-content
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/tile-content/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_tile_content
+    libfuzzer: true
+    timeout: 10
